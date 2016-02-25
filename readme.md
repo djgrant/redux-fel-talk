@@ -1,10 +1,15 @@
-Slide deck from my talk at [FEL](http://www.frontendlondon.co.uk/) on [Redux](redux.js.org).
+Slide deck from my talk at [FEL](http://www.frontendlondon.co.uk/) on [Redux](http://redux.js.org).
 
-You can run this deck using [markdeck](https://github.com/djgrant/markdeck):
+Grab the repo:
 
-```bash
+```
 git clone https://github.com/djgrant/redux-fel-talk.git
 cd redux-fel-talk
+```
+
+You can then run the deck in your browser using [markdeck](https://github.com/djgrant/markdeck):
+
+```bash
 npm install -g markdeck
 markdeck deck.md
 ```
