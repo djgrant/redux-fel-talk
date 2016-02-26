@@ -2,6 +2,12 @@
 
 ---
 
+@danieljohngrant
+
+Lostmy.name
+
+---
+
 > "The point of philosophy is to start with something so simple as not to seem worth stating, and to end with something so paradoxical that no one will believe it."
 
 ##### Bertrand Russell
@@ -72,6 +78,72 @@ That wasn't pure
 ---
 
 <image src="http://danielgrant.co/redux-fel-talk/images/redux-architecture.jpg" />
+
+---
+
+Live Code
+
+---
+
+Basic Redux with jQuery
+
+[https://jsbin.com/xujumi/edit?js,console,output](https://jsbin.com/xujumi/edit?js,console,output)
+
+---
+
+Basic Redux with React
+
+[https://jsbin.com/zagajep/edit?js,console,output](https://jsbin.com/zagajep/edit?js,console,output)
+
+---
+
+## Connecting to React
+
+---
+
+```js
+<Provider>
+
+connect()
+````
+
+---
+
+```js
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
+```
+
+---
+
+```js
+connect(mapStateToProps, mapDispatchToProps)(Component);
+````
+
+---
+
+```js
+var mapStateToProps = state => ({
+  filters: state.entities.filters
+});
+
+connect(mapStateToProps)(FilterList);
+```
+
+---
+
+```js
+
+var mapDispatchToProps = dispatch => ({
+  onClick: value => dispatch(changeFilter(value))
+});
+
+connect(null, mapDispatchToProps)(Filter);
+```
 
 ---
 
@@ -175,55 +247,6 @@ var Filter = React.createClass({
 
 ---
 
-## Connecting to React
-
----
-
-```js
-<Provider>
-
-connect()
-````
-
----
-
-```js
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);
-```
-
----
-
-```js
-connect(mapStateToProps, mapDispatchToProps)(Component);
-````
-
----
-
-```js
-var mapStateToProps = state => ({
-  filters: state.entities.filters
-});
-
-connect(mapStateToProps)(FilterList);
-```
-
----
-
-```js
-
-var mapDispatchToProps = dispatch => ({
-  onClick: value => dispatch(changeFilter(value))
-});
-
-connect(null, mapDispatchToProps)(Filter);
-```
-
----
 
 ## Resources
 
@@ -232,6 +255,7 @@ connect(null, mapDispatchToProps)(Filter);
 - Eggheads screencasts - [https://egghead.io/series/getting-started-with-redux](https://egghead.io/series/getting-started-with-redux)
 - These slides - [https://github.com/djgrant/redux-fel-talk](https://github.com/djgrant/redux-fel-talk)
 - Redux examples - [https://github.com/reactjs/redux](https://github.com/reactjs/redux)
+- Ducks for modular Redux components - [https://github.com/erikras/ducks-modular-redux](https://github.com/erikras/ducks-modular-redux)
 
 ---
 
