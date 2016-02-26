@@ -260,4 +260,4 @@ var Filter = React.createClass({
 ---
 
 ## Be my friend
-#### @danieljohngrant
+#### [@danieljohngrant](https://twitter.com/danieljohngrant)
